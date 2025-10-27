@@ -81,14 +81,12 @@
 			<p class="text-0">Hugo <span class="small-caps">Le Baher</span></p>
 			<a href="tel:+33667399441">+33 6 67 39 94 41</a>
 			<a href="mailto:lebaherhugo@gmail.com">lebaherhugo@gmail.com</a>
-			<p>le {today}</p>
 		</div>
 
 		<div class="text-1 sans-serif ml-auto flex flex-col items-start">
-			<p class="text-0">CGI</p>
-			<p>Immeuble Andromède</p>
-			<p>6 Rue des Comètes</p>
-			<p>33187 Le Haillan</p>
+			<p class="text-0">CEA Cesta</p>
+			<p>15 Avenue des Sablières</p>
+			<p>33116 Le Barp Cedex </p>
 		</div>
 	</div>
 

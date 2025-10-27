@@ -1,4 +1,5 @@
 export interface CVData {
+  colors?: CVColors;
   name: string;
   first_name: string;
   job: string;
@@ -25,4 +26,10 @@ export interface CVSubsection {
   title?: string;
   items: string[];
   dates?: string;
+}
+
+export interface CVColors {
+  background: string;
+  text: string;
+  accent: string;
 }

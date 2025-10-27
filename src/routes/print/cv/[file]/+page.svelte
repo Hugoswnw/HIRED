@@ -9,9 +9,15 @@
 		linkedin: 'https://www.linkedin.com/in',
 	};
 
-	let accent = "#1E93AB";
+	// default theme
+	let accent = "#1E93AB"; 
 	let textColor = "black";
 	let background = "#F3F2EC";
+	if (cv.colors) {
+		accent = cv.colors.accent; 
+		textColor = cv.colors.text;
+		background = cv.colors.background;
+	}
 </script>
 
 <svelte:head>
@@ -53,7 +59,7 @@
 		}
 
 		.text-1 {
-			font-size: 6mm;
+			font-size: 5.64mm;
 			line-height: 7mm;
 			font-weight: 700;
 			color: var(--accent);
@@ -89,19 +95,19 @@
 </svelte:head>
 
 <div
-	class="page flex h-full w-full flex-col gap-[3mm] px-[13mm] py-[8mm]"
+	class="page flex h-full w-full flex-col gap-[2mm] px-[12mm] py-[7mm]"
 	style="--accent: {accent}; --text: {textColor}; --background: {background}"
 >
-	<header class="flex items-end gap-[7mm]">
+	<header class="flex items-end gap-[5mm]">
 		<div>
 			<h1 class="text-0">
 				{cv.first_name} <span class="small-caps">{cv.name}</span>
 			</h1>
-			<h1 class="text-1">{cv.job} — {cv.specialty}</h1>
-			<p class="text-4 serif mt-[1.5mm] text-justify">{cv.introduction}</p>
+			<h1 class="text-1">{cv.job} - {cv.specialty}</h1>
+			<p class="text-4 serif text-justify">{cv.introduction}</p>
 		</div>
 
-		<div class="flex flex-col text-3 gap-[1.4mm]">
+		<div class="flex flex-col text-3 gap-[1.5mm]">
 			{#each Object.entries(cv.informations) as [info_type, info_value]}
 				<div class="flex gap-[1.5mm] items-end">
 					<div
@@ -123,7 +129,7 @@
 
 	<div class="flex h-full flex-col justify-between">
 		{#each cv.sections as section}
-			<div class="flex flex-col gap-[1mm]">
+			<div class="flex flex-col gap-[.5mm]">
 				<div class="flex items-end gap-2">
 					<h2 class="text-2 whitespace-nowrap">{section.title}</h2>
 					<div class="h-[3px] flex-grow mb-[0.55em] rounded-full separator"></div>
@@ -146,7 +152,7 @@
 							{:else}
 								{#if subsection.title}
 									<div class="flex gap-[2mm]">
-										<div class="w-[39mm] flex justify-between items-center text-4">
+										<div class="w-[37mm] flex justify-between items-center text-4">
 											<h4>{subsection.dates?.[0]}</h4>
 											{#if subsection.dates && subsection.dates.length > 1}
 												<span>-</span>
