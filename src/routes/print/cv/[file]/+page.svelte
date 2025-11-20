@@ -74,7 +74,7 @@
 
 		.text-3,
 		.text-4 {
-			font-size: 4.3mm;
+			font-size: 4.2mm;
 			line-height: 4.7mm;
 			font-weight: 600;
 			color: var(--text);
