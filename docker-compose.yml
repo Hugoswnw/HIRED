@@ -7,6 +7,9 @@ services:
     environment:
       - NODE_ENV=development
     volumes:
+      - ${CV_ROOT}:/app/static/files/cv
+      - ${LETTER_ROOT}:/app/static/files/letter
+      - ${STYLES_ROOT}:/app/static/files/styles
       - ./src:/app/src
       - ./static:/app/static
       - ./vite.config.ts:/app/vite.config.js
