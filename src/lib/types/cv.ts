@@ -5,26 +5,20 @@ export interface CVData extends DocumentData{
   first_name: string;
   job: string;
   specialty: string;
-  informations: CVInformations;
+  informations: {
+    address: string;
+    email: string;
+    phone: string;
+    linkedin: string;
+  };
   introduction: string;
-  sections: CVSection[];
-}
-
-export interface CVInformations {
-  address: string;
-  email: string;
-  phone: string;
-  linkedin: string;
-}
-
-export interface CVSection {
-  title?: string;
-  type: "full" | "compact";
-  subsections: CVSubsection[];
-}
-
-export interface CVSubsection {
-  title?: string;
-  items: string[];
-  dates?: string;
+  sections: {
+    title?: string;
+    type: "full" | "compact";
+    subsections: {
+      title?: string;
+      items: string[];
+      dates?: string;
+    }[];
+  } [];
 }

@@ -25,3 +25,4 @@ vite.config.ts.timestamp-*
 
 exports/*
 src/lib/data/*
+HIRED.code-workspace
